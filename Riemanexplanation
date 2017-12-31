@@ -1,0 +1,15 @@
+Code for Reimann Mid Point Sum in Java:
+I have written this code to find the approximate area under a curve i.e. a function of variable x.To find the area I used the Reimann mid point sum rule.
+According to this rule :
+Approximating f at the midpoint of intervals gives f(a + Q/2) for the first interval, for the next one f(a + 3Q/2), and so on untilf(b − Q/2). Summing up the areas gives
+
+In this formula values of x range from a to b.
+(b-a/n) is called the step size i.e. increase in every consecutive value of x.
+In the above formula step size is represented by Q.
+Using this formula we partition the interval of integration into rectangles each of who's length is the value of function at the mid point of two consecutive x values and breadth is the step size.
+In the code that I have written,I have defined the step size as deltax and f(x) as function(x).
+First method of the code i.e. function() initializes the function.
+Second method of the code i.e. area() computes the value of area under the curve using a for loop.
+The value of variable sum and variable x s calculated inside the loop.
+I have calculated every other value of x using the above formula.Value of x keeps on increasing in multiples of step size divided by 2.
+At the end of the loop the final value of x is put inside the function and then it is multiplied by the step size to give the total areas of all rectangles under the curve.

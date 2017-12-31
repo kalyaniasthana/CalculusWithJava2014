@@ -1,0 +1,18 @@
+Code for Trapezoidal Rule in Java:
+I have written this code to find the approximate area under a curve i.e. a function of variable x.To find the area I used the trapezoidal rule.
+According to this rule approximate area under a curve =
+
+T = b - a   [ 1/2f(a) +  f(x1 ) +   f(x2 ) + ... +  f(xn-1 ) + 1/2f(b ) ]
+        n
+In this formula values of x range from a to b.
+(b-a/n) is called the step size i.e. the increase in every consecutive value of x.
+This formula is used for functions for which we can not easily find an anti-derivative.We partition the interval of integration into trapezoids and sum the area of all the trapezoids in every interval.
+The major assumption used in this method is that the function is never negative.
+In the code that I have written ,I have defined the step size as deltax and f(x) as function(x).
+First method of the code i.e. function() initializes the  function.
+Second method of the code i.e. area() computes the value of area under the curve using a for loop.
+Before the loop I assigned an initial value to the variable sum which is (f(a) + f(b))/2.This initial value will keep on increasing inside the loop.I have assigned this value to sum because in the above formula  the first and last values of the function have been divided by 2 whereas the other values have not been divided.
+Inside the loop x values range from a+1 to b-1.
+The loop keeps incrementing the values of x by a small amount which is deltax multiplied by the index of the x value(done according to formula).
+For every increment in the value of x ,there is an increase in the value of variable sum (since the function is never negative).
+The final area is given by the sum multiplied by deltax.
